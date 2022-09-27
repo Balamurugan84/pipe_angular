@@ -1,0 +1,56 @@
+<router-outlet></router-outlet>
+
+
+<h3 class="text-center">pipes</h3>
+<br>
+
+{{day | date:'dd-MM-yy hh:mm:ss'}}
+
+<br>
+
+{{name | uppercase}}
+<br>
+{{name | lowercase}}
+<br>
+{{name | titlecase}}
+<br>
+
+<p>Number:  {{num  | number}}</p>
+<p>Number:  {{num  | number: '8.3-4'}}</p>
+
+<br>
+
+<p>percentage:  {{per  | percent: '2.1-2'}}</p>
+<br>
+
+<div>
+  currency: {{num | currency}}
+  <br>
+  currency: {{num | currency: 'INR'}}
+  <br>
+  currency: {{num | currency: 'ERU'}}
+  <br>
+  currency: {{num | currency: 'CAD'}}  
+  <br>
+  currency: {{num | currency: 'CAD' : 'symbol-narrow'}}  
+  <br>
+  currency: {{num | currency: 'INR':'Rs'}}
+</div>
+
+<div>
+  object: {{obj | json}}
+  <br>
+
+  array: {{arr}}
+  <br>
+
+  slice: {{arr  |  slice: 1:2}}
+</div>
+<br>
+
+<div>
+  key_value : {{obj | keyvalue | json }} 
+  <br><br>
+  key_value : {{obj | keyvalue | json | uppercase}}
+</div>
+
