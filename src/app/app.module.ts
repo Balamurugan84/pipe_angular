@@ -4,9 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import {AppendPipe} from './custom_pipe';
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppendPipe
   ],
   imports: [
     BrowserModule,
